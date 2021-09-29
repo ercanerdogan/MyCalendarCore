@@ -18,7 +18,8 @@
                         {
                             DateTime date = new DateTime(DateTime.Now.Year, i, 1);
                             var monthName = date.ToString("MMM");
-                            <a class = "btn btn-outline-secondary" asp-action="Index" asp-route-id="@i">@monthName</a>
+                            //<a class="btn btn-outline-secondary" asp-action="Index" asp-route-id="@i">@monthName</a>
+                            <a href="#" onclick="GetAppointments(@i); return false;" class="btn btn-outline-secondary">@monthName</a>
                         }
 
                     </div>
@@ -36,7 +37,27 @@
         </div>
     </div>
 
-
-
 </div>
+
+<script type='text/javascript'>
+
+    function GetAppointments(monthId) {
+
+        $.ajax({
+            type: "POST",
+            url: "@Url.Action("GetAppointments")",
+            data: { id: monthId},
+            dataType: "text",
+            success: function (res) {
+                console.log(res);
+
+                $('#appList').replaceWith($('#appList').html(res));
+            },
+            error: function (req, status, error) {
+                console.log(res);
+            }
+        });
+
+    }
+</script>
 
