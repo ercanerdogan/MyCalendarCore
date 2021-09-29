@@ -49,15 +49,26 @@
             data: { id: monthId},
             dataType: "text",
             success: function (res) {
-                console.log(res);
-
-                $('#appList').replaceWith($('#appList').html(res));
+                //console.log(res);
+                if (res == null) {
+                    $('#appList').replaceWith($('#appList').html("<h4>There is no appointment</h4>"));
+                    $('#appDetails').replaceWith($('#appDetails').html("<h4>There is no appointment</h4>"));
+                }
+                else {
+                    $('#appList').replaceWith($('#appList').html(res));
+                }
             },
             error: function (req, status, error) {
-                console.log(res);
+                NoDataFound();
+                console.log(error);
             }
         });
 
+    }
+
+    function NoDataFound() {
+        $('#appointmentListContent').replaceWith($('#appointmentListContent').html("<h4>No data found</h4>"));
+        $('#appointmentDetailContent').replaceWith($('#appointmentDetailContent').html("<h4>No data found</h4>"));
     }
 </script>
 

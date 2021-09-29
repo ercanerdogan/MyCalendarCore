@@ -2,7 +2,7 @@
     <div class="card-header">
         Appointment List
     </div>
-    <div class="card-body">
+    <div class="card-body" id="appointmentListContent">
         <table class="table table-hover table-bordered table-striped">
             <thead>
                 <tr>
@@ -40,11 +40,19 @@
             dataType: "text",
             success: function (res) {
                 //console.log(res);
+                if (res == null) {
+                    $('#appDetails').replaceWith($('#appDetails').html("<h4>There is no appointment</h4>"));
+                }
+                else {
+                    $('#appDetails').replaceWith($('#appDetails').html(res));
+                }
+
 
                 $('#appDetails').replaceWith($('#appDetails').html(res));
             },
             error: function (req, status, error) {
-                console.log(res);
+                NoDataFound();
+                console.log(error);
             }
         });
         

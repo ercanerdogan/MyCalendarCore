@@ -234,17 +234,18 @@ namespace MyCalendar.Data
                         Subject = "Sprint Daily",
                         AppointmentDate = Convert.ToDateTime("11/01/2021 10:00am", cultures),
                         Attendees = "Ercan, John, Jane"
-                    },
-
-                    new Appointment
-                    {
-                        Id = 22,
-                        Organizer = "Ercan",
-                        Description = "Daily Meeting",
-                        Subject = "Sprint Daily",
-                        AppointmentDate = Convert.ToDateTime("12/01/2021 10:00am", cultures),
-                        Attendees = "Ercan, John, Jane"
                     }
+                    //},
+
+                    //new Appointment
+                    //{
+                    //    Id = 22,
+                    //    Organizer = "Ercan",
+                    //    Description = "Daily Meeting",
+                    //    Subject = "Sprint Daily",
+                    //    AppointmentDate = Convert.ToDateTime("12/01/2021 10:00am", cultures),
+                    //    Attendees = "Ercan, John, Jane"
+                    //}
 
                 );
 
