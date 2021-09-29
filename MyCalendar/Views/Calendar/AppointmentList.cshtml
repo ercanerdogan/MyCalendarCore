@@ -1,0 +1,52 @@
+﻿<div class="card shadow-sm" id="appointmentList">
+    <div class="card-header">
+        Appointment List
+    </div>
+    <div class="card-body">
+        <table class="table table-hover table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var appItem in Model)
+                {
+                <tr>
+                    <td>@appItem.Id</td>
+                    <td>@(((DateTime)appItem.AppointmentDate).ToString("f"))</td>
+                    <td>@appItem.Description</td>
+                    <td><a href="#" onclick="getDetails(@appItem.Id); return false;" class="btn btn-primary btn-sm">Details</a></td>
+                </tr>
+                }
+            </tbody>
+        </table>
+        <a href="#" class="btn btn-primary">New Appointment</a>
+
+    </div>
+</div>
+
+<script type='text/javascript'>
+
+    function getDetails(appId) {
+
+        $.ajax({
+            type: "POST",
+            url: "@Url.Action("GetAppointmentDetails")",
+            data: { id: appId},
+            dataType: "text",
+            success: function (res) {
+                console.log(res);
+
+                $('#appDetails').replaceWith($('#appDetails').html(res));
+            },
+            error: function (req, status, error) {
+                console.log(res);
+            }
+        });
+        
+    }
+</script>

@@ -1,0 +1,39 @@
+﻿@using MyCalendar.Core.Models
+@model Appointment
+
+<div class="card shadow-sm" id="appointmentDetail">
+    <div class="card-header">
+        Appointment Details
+    </div>
+    <div class="card-body">
+        <table class="table table-hover table-bordered table-striped">
+            <tbody>
+                <tr>
+                    <td>Description</td>
+                    <td>@Model.Description</td>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td>@Model.AppointmentDate</td>
+                </tr>
+                <tr>
+                    <td>Organizer</td>
+                    <td>@Model.Organizer</td>
+                </tr>
+                <tr>
+                    <td>Attendees</td>
+                    <td>@Model.Attendees</td>
+                </tr>
+
+            </tbody>
+        </table>
+        <div class="justify-content-end">
+            <a href="#" class="btn btn-success btn-sm float-left">Edit</a>
+            <a href="/Calendar/DeleteAppointment/@Model.Id" onclick="return confirm('Are you sure you want to delete this item?')" class="btn btn-danger btn-sm float-right">Delete</a>
+
+
+        </div>
+
+
+    </div>
+</div>
