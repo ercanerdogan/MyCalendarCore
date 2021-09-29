@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCalendar.UI", "MyCalendar\MyCalendar.UI.csproj", "{03410511-69D0-41A5-AE61-2AB10E180432}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCalendar.UI", "MyCalendar\MyCalendar.UI.csproj", "{03410511-69D0-41A5-AE61-2AB10E180432}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCalendar.Business", "MyCalendar.Business\MyCalendar.Business.csproj", "{4775915B-B1B0-40AE-A02D-278F145EC81E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCalendar.Business", "MyCalendar.Business\MyCalendar.Business.csproj", "{4775915B-B1B0-40AE-A02D-278F145EC81E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCalendar.Core", "MyCalendar.Core\MyCalendar.Core.csproj", "{317677D6-5AD0-4A19-A2A8-15F216D1C7EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCalendar.Core", "MyCalendar.Core\MyCalendar.Core.csproj", "{317677D6-5AD0-4A19-A2A8-15F216D1C7EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCalendar.Data", "MyCalendar.Data\MyCalendar.Data.csproj", "{7F64DF8C-3316-4188-92FC-3329F214106A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCalendar.Data", "MyCalendar.Data\MyCalendar.Data.csproj", "{7F64DF8C-3316-4188-92FC-3329F214106A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCalendar.UI.Test", "MyCalendar.UI.Test\MyCalendar.UI.Test.csproj", "{F73D419E-42BC-4C36-B6BE-9D9DF88BE74D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{7F64DF8C-3316-4188-92FC-3329F214106A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F64DF8C-3316-4188-92FC-3329F214106A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F64DF8C-3316-4188-92FC-3329F214106A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F73D419E-42BC-4C36-B6BE-9D9DF88BE74D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F73D419E-42BC-4C36-B6BE-9D9DF88BE74D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F73D419E-42BC-4C36-B6BE-9D9DF88BE74D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F73D419E-42BC-4C36-B6BE-9D9DF88BE74D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

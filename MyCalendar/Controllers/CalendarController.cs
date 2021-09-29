@@ -30,14 +30,26 @@ namespace MyCalendar.Controllers
         
         public IActionResult GetAppointments(int id)
         {
+
             var appList = _repository.Find(ap=>ap.AppointmentDate.Month == id);
+
+            if (appList.Count() == 0)
+            {
+                return NotFound();
+            }
 
             return PartialView("AppointmentList", appList);
         }
 
         public IActionResult GetAppointmentDetails(int id)
         {
+
             var appointment = _repository.GetById(id);
+
+            if (appointment == null)
+            {
+                return NotFound();
+            }
 
             return PartialView("AppointmentDetail", appointment);
         }
